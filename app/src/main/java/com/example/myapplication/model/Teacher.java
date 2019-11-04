@@ -6,6 +6,13 @@ public class Teacher extends User {
 
    private String teacherId ;
    private ArrayList<String> levels ;
+    public Teacher(String firstName, String lastName, String userName, ArrayList<String> levels, String profilePicUrl){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.profilePicUrl = profilePicUrl;
+        this.levels =  levels;
+    }
 
     public Teacher() {
     }

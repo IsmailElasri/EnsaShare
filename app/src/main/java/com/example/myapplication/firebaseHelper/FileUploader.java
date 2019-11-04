@@ -24,8 +24,24 @@ public class FileUploader {
     private Context context ;
     public static String url;
 
+    public Uri getUri() {
+        return uri;
+    }
+
+    private Uri uri;
+
+
     public FileUploader(String  httpsRef) {
         httpsReference = FirebaseStorage.getInstance().getReferenceFromUrl(httpsRef);
+    }
+
+    public void downloadUri(){
+        httpsReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                FileUploader.this.uri = uri;
+            }
+        });
     }
 
 
@@ -41,8 +57,6 @@ public class FileUploader {
         MimeTypeMap mime = MimeTypeMap.getSingleton();
         return mime.getExtensionFromMimeType(cR.getType(uri));
     }
-
-
 
     public void uploadFile( Uri uri) {
 

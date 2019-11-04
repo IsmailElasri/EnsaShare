@@ -3,9 +3,17 @@ package com.example.myapplication.model;
 public class Student extends User  {
 
    private String studentId ;
-   private String level ;
+   protected String level ;
 
    public Student() {
+    }
+
+    public Student(String firstName, String lastName, String userName, String level, String profilePicUrl){
+       this.firstName = firstName;
+       this.lastName = lastName;
+       this.userName = userName;
+       this.profilePicUrl = profilePicUrl;
+       this.level = level;
     }
    public String getStudentId() {
         return studentId;

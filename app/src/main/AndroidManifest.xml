@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.group_chat"></activity>
+        <activity android:name=".view.group_posts"></activity>
         <activity android:name=".view.group" />
         <activity android:name=".view.signupteacher2" />
         <activity android:name=".view.pop_up_listlevelsteacher" />
@@ -24,6 +24,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.pop_up_signup" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
